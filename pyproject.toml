@@ -1,0 +1,21 @@
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+enable_error_code = ["explicit-override"]
+
+[tool.ruff]
+extend-select = ["B", "E", "F", "W", "C90", "I", "N", "UP", "FBT", "C4", "PIE", "PL"]
+extend-ignore = ["E501"]
+target-version = "py312"
+
+[tool.ruff.isort]
+combine-as-imports = true
+lines-after-imports = 2
+required-imports = ["from __future__ import annotations"]
+
+[tool.black]
+line-length = 120
